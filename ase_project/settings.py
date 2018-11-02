@@ -22,7 +22,7 @@ MEDIA_DIR=os.path.join(BASE_DIR,'media')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '$x2=dbfg(kxxd)@6l#hk7j8ule^)i0i66v3rl#rs2^93x4#@ea'
-
+DEFAULT_FROM_EMAIL='mukheshinturi@hushmail.com'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -135,7 +135,9 @@ MEDIA_ROOT=MEDIA_DIR
 MEDIA_URL='/media/'
 LOGIN_URL='homepage/user_login'
 
-DEFAULT_FROM_EMAIL='mukheshinturi@hushmail.com'
+
+
+
 
 EMAIL_HOST = 'smtp.hushmail.com'
 EMAIL_HOST_USER = 'mukheshinturi@hushmail.com'
