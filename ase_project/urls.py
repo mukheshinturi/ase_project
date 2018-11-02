@@ -17,7 +17,9 @@ from django.contrib import admin
 from django.urls import path,include
 from homepage import views
 
+
 urlpatterns = [
+    path('homepage/',include('django.contrib.auth.urls')),
     path('',views.index,name='index'),
     path('homepage/',include('homepage.urls')),
     path('admin/', admin.site.urls),

@@ -100,7 +100,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
-    
+
     },
     {
         'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
@@ -134,3 +134,12 @@ STATICFILES_DIRS=[STATIC_DIR]
 MEDIA_ROOT=MEDIA_DIR
 MEDIA_URL='/media/'
 LOGIN_URL='homepage/user_login'
+
+DEFAULT_FROM_EMAIL='mukheshinturi@hushmail.com'
+
+EMAIL_HOST = 'smtp.hushmail.com'
+EMAIL_HOST_USER = 'mukheshinturi@hushmail.com'
+EMAIL_HOST_PASSWORD = 'thisishushmail'
+EMAIL_PORT = 587
+EMAIL_USE_TLS =True
+EMAIL_USER_SSL=False
