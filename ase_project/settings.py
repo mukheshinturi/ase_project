@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'homepage',
-    'finalapp'
+    'finalapp',
+    'category_page.apps.CategoryPageConfig',
 ]
 
 MIDDLEWARE = [
