@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect,HttpResponse
 from django.contrib.auth import authenticate,login,logout
+from finalapp.views import searchdata
 
 def index(request):
     return render(request,'homepage/index.html')
@@ -50,3 +51,4 @@ def user_login(request):
             return HttpResponse("invalid login details supplied!")
     else:
         return render(request,'homepage/login.html')
+    
