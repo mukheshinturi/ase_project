@@ -1,19 +1,9 @@
 @charset "utf-8";
-/*
-Template Name: Maxisonix
-Author: <a href="http://www.os-templates.com/">OS Templates</a>
-Author URI: http://www.os-templates.com/
-Licence: Free to use under our free template licence terms
-Licence URI: http://www.os-templates.com/template-terms
-File: Layout CSS
-*/
-
 @import url("fontawesome-4.6.3.min.css");
 @import url("custom.flexslider.css");
 @import url("framework.css");
 
-/* Rows
---------------------------------------------------------------------------------------------------------------- */
+/* Rows*/
 .row0, .row0 a{}
 .row1, .row1 a{}
 .row2, .row2 a{}
@@ -22,8 +12,7 @@ File: Layout CSS
 .row5, .row5 a{}
 
 
-/* Top Bar
---------------------------------------------------------------------------------------------------------------- */
+/* Top bar*/
 #topbar{padding:15px 0; border-bottom:1px solid; font-size:.8rem; text-transform:uppercase;}
 
 #topbar *{margin:0; padding:0; list-style:none;}
@@ -32,34 +21,14 @@ File: Layout CSS
 #topbar i{margin:0 5px 0 0; line-height:normal;}
 
 
-/* Header
---------------------------------------------------------------------------------------------------------------- */
+/* Header*/
 #header{}
 
 #header #logo{margin:30px 0 0 0;}
 #header #logo h1{margin:0; padding:0; font-size:22px; text-transform:uppercase;}
 
 
-/* Page Intro
---------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:150px 0;}
-
-#pageintro li article{display:block; max-width:75%; margin:0 auto; text-align:center;}
-#pageintro li article *{margin:0;}
-#pageintro li p:first-of-type{margin-bottom:10px; font-style:italic;}
-#pageintro li .heading{margin-bottom:30px; font-size:3rem; word-wrap:break-word;}
-#pageintro li p:nth-of-type(2){line-height:1.5rem;}
-#pageintro li footer{margin-top:40px;}
-
-#pageintro footer form{display:block; position:relative; max-width:50%; margin:0 auto; overflow:hidden;}
-#pageintro footer input, #pageintro footer button{display:block; height:44px; border:none; border-radius:22px;}
-#pageintro footer input{width:100%; padding:5px 40px 5px 15px;}
-#pageintro footer button{position:absolute; top:1px; right:1px; width:42px; height:42px; font-size:16px; cursor:pointer; border-radius:50%;}
-#pageintro footer button em{display:none;}
-
-
-/* Content Area
---------------------------------------------------------------------------------------------------------------- */
+/* Content Area*/
 .container{padding:80px 0;}
 
 /* Content */
@@ -69,54 +38,13 @@ File: Layout CSS
 .stats li *{margin:0;}
 .stats li p:first-of-type{margin-bottom:10px;}
 
-/* Comments */
-#comments ul{margin:0 0 40px 0; padding:0; list-style:none;}
-#comments li{margin:0 0 10px 0; padding:15px;}
-#comments .avatar{float:right; margin:0 0 10px 10px; padding:3px; border:1px solid;}
-#comments address{font-weight:bold;}
-#comments time{font-size:smaller;}
-#comments .comcont{display:block; margin:0; padding:0;}
-#comments .comcont p{margin:10px 5px 10px 0; padding:0;}
-
-#comments form{display:block; width:100%;}
-#comments input, #comments textarea{width:100%; padding:10px; border:1px solid;}
-#comments textarea{overflow:auto;}
-#comments div{margin-bottom:15px;}
-#comments input[type="submit"], #comments input[type="reset"]{display:inline-block; width:auto; min-width:150px; margin:0; padding:8px 5px; cursor:pointer;}
-
 /* Sidebar */
 .container .sidebar{}
 
 .sidebar .sdb_holder{margin-bottom:50px;}
 .sidebar .sdb_holder:last-child{margin-bottom:0;}
 
-
-/* Split Box
---------------------------------------------------------------------------------------------------------------- */
-.split{}
-
-.split section{display:block; position:relative; float:right; width:50%; padding:100px 0 100px 50px;}
-.split section::after{display:block; position:absolute; top:0; right:-1000%; bottom:0; left:100%; content:"";}
-
-.split section article{display:block; position:relative; min-height:80px; margin:0 0 40px 0; padding:0 0 0 80px;}
-.split section article::before, .split section article::after{display:table; content:"";}
-.split section article::after{clear:both;}
-.split section article *{margin:0 0 15px 0;}
-.split section article:last-child, .split section article > :last-child{margin-bottom:0;}
-.split section article i{position:absolute; top:0; left:0;}
-.split section article .heading{}
-
-
-/* Cta
---------------------------------------------------------------------------------------------------------------- */
-.cta{padding:20px 0;}
-
-.cta > :first-child{margin-top:10px;}
-.cta > :last-child{margin-bottom:0;}/* Used when elements stack in smaller viewports */
-
-
-/* Footer
---------------------------------------------------------------------------------------------------------------- */
+/* Footer*/
 #footer{padding:80px 0;}
 
 #footer .title{margin:0 0 50px 0; padding:0; font-size:1.2rem;}
@@ -132,27 +60,17 @@ File: Layout CSS
 #footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
 
 
-/* Copyright
---------------------------------------------------------------------------------------------------------------- */
+/* Copyright*/
 #copyright{padding:20px 0;}
 #copyright *{margin:0; padding:0;}
 
 
-/* Transition Fade
---------------------------------------------------------------------------------------------------------------- */
+/* Transition Fade*/
 *, *::before, *::after{transition:all .3s ease-in-out;}
 #mainav form *{transition:none !important;}
 
 
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-
-
-/* Navigation
---------------------------------------------------------------------------------------------------------------- */
+/* Navigation*/
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
@@ -245,15 +163,6 @@ td{border-width:0 1px;}
 .faicon-linkedin:hover{background-color:#0E76A8;}
 .faicon-twitter:hover{background-color:#00ACEE;}
 .faicon-vk:hover{background-color:#4E658E;}
-
-
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-
-
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
 body{color:#7F7F7F; background-color:#141414;}
@@ -290,12 +199,6 @@ input:focus, textarea:focus, *:required:focus{border-color:#EA2C5A;}
 /* Header */
 #header #logo a{color:inherit;}
 
-
-/* Page Intro */
-#pageintro footer input, #pageintro footer button{color:#000000; background-color:#FFFFFF;}
-#pageintro footer button{color:#FFFFFF; background-color:#EA2C5A;}
-
-
 /* Content Area */
 .services article i{color:#EA2C5A; border-color:#D7D7D7;}
 .services article:hover i{color:#FFFFFF; background-color:#EA2C5A; border-color:#EA2C5A;}
@@ -327,23 +230,6 @@ input:focus, textarea:focus, *:required:focus{border-color:#EA2C5A;}
 .pagination .current *{color:#FFFFFF; background-color:#EA2C5A;}
 
 #backtotop{color:#FFFFFF; background-color:#EA2C5A;}
-
-
-/* Tables + Comments */
-table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
-#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#EA2C5A;}
-th{color:#FFFFFF; background-color:#373737;}
-tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
-tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
-table a, #comments a{background-color:inherit;}
-
-
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-/* ------------------------------------------------------------------------------------------------------------ */
-
 
 /* Media Queries
 --------------------------------------------------------------------------------------------------------------- */

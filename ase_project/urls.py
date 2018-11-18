@@ -29,8 +29,8 @@ urlpatterns = [
     path('special/',views.special,name='special'),
     path('finalapp/',include('finalapp.urls')),
     path('category_page/',include('category_page.urls')),
-    path('myapp',include('myapp.urls'))
+    path('myapp',include('myapp.urls')),
+    path('feedback/',views.display_feedback,name='display_feedback')
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
