@@ -44,7 +44,9 @@ INSTALLED_APPS = [
     'homepage',
     'finalapp',
     'category_page',
-    'myapp'
+    'myapp',
+    'users',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -157,3 +159,5 @@ EMAIL_HOST_PASSWORD = 'thisisooha'
 EMAIL_PORT = 587
 EMAIL_USE_TLS =True
 EMAIL_USER_SSL=False
+
+CRISPY_TEMPLATE_PACK='bootstrap'

@@ -1,0 +1,18 @@
+{% extends "homepage/base.html" %}
+
+{% load staticfiles %}
+{% block content %}
+    <div class="content-section">
+        <div class="media">
+            <h1><img class="rounded-circle account-img" src="{{ user.profile.image.url }}"></div>
+        </h1>
+        <div class="media-body">
+            <h1 class="account-heading">{{ user.username }}</h1>
+            <p class="text-secondary">{{ user.email }}</p>
+            <a href="{% url 'model_form_upload' %}">Model Form Upload</a>
+        </div>
+    </div>
+    <!-- FORM HERE -->
+    </div>
+    {{ p }}
+{% endblock content %}

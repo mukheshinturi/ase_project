@@ -13,6 +13,9 @@ class Document(models.Model):
     ('Lifestyle','Lifestyle'),
     ('Nature','Nature'),
     ('People','People'),
+    ('Architecture','Architecture'),
+    ('Sports','Sports'),
+    ('Fashion','Fashion'),
     )
     user= models.ForeignKey(User,on_delete=models.CASCADE)
     name= models.CharField(max_length=150,default="")
