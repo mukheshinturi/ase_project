@@ -5,8 +5,8 @@ from django.conf import settings
 
 # Create your views here.
 #import pathlib
-def index(request,value):
-    p=Document.objects.filter(category=value)
+def index(request):
+    p=Document.objects.filter(category="Animals")
     items=[]
     listitems=[]
     # for w in p:
