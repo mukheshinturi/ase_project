@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link rel="shortcut icon" href="{% static 'category/images/favicon.ico' %}" />
 <link rel="stylesheet" href="{% static 'homepage/css/index.css' %}">
     <!--Links for materialize css-->
     <!-- Compiled and minified CSS -->
@@ -30,7 +31,18 @@
             <a href="#" class="sidenav-trigger" data-target="mobile-links">
               <i class="material-icons">menu</i>
             </a>
-            <ul class="right hide-on-med-and-down">
+
+            <ul class="right hide-on-med-and-down valign-wrapper">
+              <li>
+                <div style="height:3vw" >
+                <form action="{% url 'searchdata' %}" method="get">
+                <div class="input-field grey lighten-4">
+                    <input id="search" name="searchword" type="search" required>
+                    <label class="label-icon valign-wrapper" for="search"><i class="material-icons indigo-text text-darken-4">search</i></label>
+                    <i class="material-icons">close</i>
+                </div>
+                </form>
+              </li>
               {% if user.is_authenticated %}
               <li>
                 <a href="#" >Profile</a>
@@ -60,6 +72,17 @@
       </div>
 
       <ul class="sidenav" id="mobile-links">
+        <div class="container">
+
+          <li>
+            <form action="{% url 'searchdata' %}" method="get">
+            <div class="input-field">
+                <input id="search" type="search" name="searchword" placeholder="Search images" required>
+                <i class="material-icons">close</i>
+            </div>
+            </form>
+          </li>
+        </div>
         {% if user.is_authenticated %}
         <li>
           <a href="#" >Profile</a>
@@ -75,6 +98,7 @@
           <a href="{% url 'homepage:register' %}">Signup</a>
         </li>
         {% endif %}
+
         <li>
           <a href="#about" >About</a>
         </li>
@@ -119,6 +143,7 @@
                         <li><a class="grey-text text-ighten-3" href="#!">Gmail</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
                         <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{% url 'homepage:user_feedback' %}">Feedback</a></li>
                       </ul>
                     </div>
                   </div>

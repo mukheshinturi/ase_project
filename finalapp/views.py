@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.core.files.storage import FileSystemStorage
+from django.db.models import Q
 import os
 
 from .models import Document
@@ -25,9 +26,19 @@ def model_form_upload(request):
 def searchdata(request):
      if request.method=="GET":
          key=request.GET.get('searchword')
-         searcheddict=Document.objects.filter(name__icontains=key)
-         listimages=[]
-         namelist=[]
+         #key2=request.GET.get('searchwordmain')
+         searchedlist=Document.objects.filter(Q(category__icontains=key) | Q(name__icontains = key))
+         #print(searcheddict)
+         #x = Document.objects.filter(category__icontains=key)
+         #print(x)
+         #z = {**x,**searcheddict}
+         #print(z)
+         # if len(searcheddict)==0:
+         #     searcheddict=Document.objects.filter(category__icontains=key)
+         #searcheddict2=Document.objects.filter(name__icontains=key)
+         #searcheddict2=Document.objects.filter(name__icontains=key2)
+         items=[]
+
          #searchedlist=[]
          # for obj in queryset:
          #     if obj.name==key:
@@ -36,17 +47,18 @@ def searchdata(request):
          #  searchedlist.append(p)
          #  print(p.name)
          #print(settings.MEDIA_DIR)
-         for p in searcheddict:
-            x = str(p.image)
-            y = os.path.join(settings.MEDIA_DIR,x)
-            print(y)
+         #for p in searcheddict:
+
+            # x = str(p.image)
+            # y = os.path.join(settings.MEDIA_DIR,x)
+            #print(y)
             #listimages.append(y)
-            listimages.append(y)
+            #listimages.append(y)
             #print("df",listimages)
          #listimages = [w.replace('\\', '\') for w in listimages]
-         print(listimages)
+         #print(listimages)
+         context={'items':searchedlist}
 
-
-     return render(request,'finalapp/searchdata.html',{'searcheddict':listimages})
+     return render(request,'myapp/category/index.html',context)
 
 # Create your views here.

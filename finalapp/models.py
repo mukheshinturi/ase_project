@@ -19,7 +19,7 @@ class Document(models.Model):
     category= models.CharField(max_length=150,default="",choices=category_choices)
     image=models.ImageField(default='',upload_to='')
     uploaded_at=models.DateTimeField(auto_now_add=True)
-    rating=models.IntegerField(default='0')
+    rating=models.IntegerField(default='5')
     total_image_downloads=models.IntegerField(default='0')
     #userid=models.OneToOneField(models1.UserProfileInfo,on_delete='CASCADE')
     #userid=FOREIGNKEY(UserProfileInfo,on_delete='CASCADE')

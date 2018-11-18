@@ -1,7 +1,20 @@
 {% extends "homepage/base.html" %}
 {% load staticfiles %}
 {% block content %}
-
+{% if user_form.errors %}
+    {% for field in user_form %}
+        {% for error in field.errors %}
+              <div class="container center-align">
+                <h5>{{error|escape}}<h5>
+              </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in user_form.non_field_errors %}
+    <div class="container center-align">
+      <h5>{{error|escape}}<h5>
+    </div>
+    {% endfor %}
+{% endif %}
    {% if registered %}
       <div class="container center-align">
         <h2>Thank You For Being A Collaborator</h3>
@@ -40,11 +53,18 @@
         <label for="password">Password</label>
       </div>
     </div>
+
+
     <div class="row">
       <div class="input-field col s4 offset-s2">
         <input id="email" type="email" class="validate" name="email" required>
         <label for="email">Email</label>
       </div>
+      <div class="input-field col s4">
+          <input id="re_password" type="password" class="validate" name="re_password" min="6" required>
+          <label for="re_password">Retype Password</label>
+      </div>
+
     </div>
     <div class="row">
       <div class="input-field col s4 offset-s5">

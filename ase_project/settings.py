@@ -22,7 +22,7 @@ MEDIA_DIR=os.path.join(BASE_DIR,'media')
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = '$x2=dbfg(kxxd)@6l#hk7j8ule^)i0i66v3rl#rs2^93x4#@ea'
-DEFAULT_FROM_EMAIL='mukheshinturi@hushmail.com'
+DEFAULT_FROM_EMAIL='ooha123321@hushmail.com'
 
 
 
@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'homepage',
     'finalapp',
-    'category_page.apps.CategoryPageConfig',
+    'category_page',
+    'myapp'
 ]
 
 MIDDLEWARE = [
@@ -142,11 +143,17 @@ LOGIN_URL='homepage/user_login'
 
 
 
+# EMAIL_HOST = 'smtp.hushmail.com'
+# EMAIL_HOST_USER = 'mukheshinturi@hushmail.com'
+# EMAIL_HOST_PASSWORD = 'thisishushmail'
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS =True
+# EMAIL_USER_SSL=False
 
 
 EMAIL_HOST = 'smtp.hushmail.com'
-EMAIL_HOST_USER = 'mukheshinturi@hushmail.com'
-EMAIL_HOST_PASSWORD = 'thisishushmail'
+EMAIL_HOST_USER = 'ooha123321@hushmail.com'
+EMAIL_HOST_PASSWORD = 'thisisooha'
 EMAIL_PORT = 587
 EMAIL_USE_TLS =True
 EMAIL_USER_SSL=False
