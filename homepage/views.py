@@ -7,6 +7,7 @@ from django.contrib.auth import authenticate,login,logout
 from django import forms
 from django.contrib import messages
 from homepage.models import feedback
+<<<<<<< HEAD
 from finalapp.models import Document
 from homepage.models import UserProfileInfo
 def index(request):
@@ -15,6 +16,10 @@ def index(request):
     my_dict={'new_images':my_list}
 
     return render(request,'homepage/index.html',my_dict)
+=======
+def index(request):
+    return render(request,'homepage/index.html')
+>>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
 
 def register(request):
     registered=False
@@ -33,7 +38,11 @@ def register(request):
             else:
                 print("something is fishy")
         else:
+<<<<<<< HEAD
             raise forms.ValidationError("Passwords do not match.Please Re_enter them")
+=======
+            raise forms.ValidationError("Passwords do not match")
+>>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
     else:
         user_form=UserForm()
 
@@ -76,6 +85,7 @@ def user_feedback(request):
     return render(request,'homepage/feedback.html')
 def display_feedback(request):
     feedbacks=feedback.objects.order_by('-pk')
+<<<<<<< HEAD
     sum=0
     count=0
     for i in feedbacks:
@@ -123,3 +133,7 @@ def edit_profile(request):
         return render(request, 'homepage/user_profile.html', my_dict)
     return render(request,'homepage/edit_profile.html')
 
+=======
+    my_dict={'feedbacks':feedbacks}
+    return render(request,'homepage/display_feedbacks.html',my_dict)
+>>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6

@@ -1,4 +1,15 @@
 @charset "utf-8";
+<<<<<<< HEAD
+=======
+/*
+Template Name: Maxisonix
+Author: <a href="http://www.os-templates.com/">OS Templates</a>
+Author URI: http://www.os-templates.com/
+Licence: Free to use under our free template licence terms
+Licence URI: http://www.os-templates.com/template-terms
+File: Framework CSS
+*/
+>>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
 
 html{overflow-y:scroll; overflow-x:hidden;}
 html, body{margin:0; padding:0; font-size:14px; line-height:1.6em;}

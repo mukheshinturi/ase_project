@@ -43,9 +43,15 @@
                 </div>
                 </form>
               </li>
+<<<<<<< HEAD
               {% if request.user.is_authenticated %}
               <li>
                 <a href="{% url 'homepage:profile_view' %}" >Profile</a>
+=======
+              {% if user.is_authenticated %}
+              <li>
+                <a href="{% url 'profile' %}" >Profile</a>
+>>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
               </li>
               <li>
                 <a href="{% url 'logout' %}" >Logout</a>
@@ -83,9 +89,15 @@
             </form>
           </li>
         </div>
+<<<<<<< HEAD
         {% if request.user.is_authenticated %}
         <li>
           <a href="{ % url 'homepage:profile_view' % }" >Profile</a>
+=======
+        {% if user.is_authenticated %}
+        <li>
+          <a href="#" >Profile</a>
+>>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
         </li>
         <li>
           <a href="{% url 'logout' %}" >Logout</a>
@@ -133,17 +145,28 @@
                   <div class="row">
                     <div class="col l6 s12">
                       <h5 class="white-text">About</h5>
+<<<<<<< HEAD
                       <p class="grey-text text-lighten-4">FreeStock.com is a website where a user can download free stock photos. <br><br>
+=======
+                      <p class="grey-text text-lighten-4">FreeStock.com is a website where a user can download free stock photos <br>
+>>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
                         A user can also join our community by signing up and posting their photographs.This is how our site works.
                       </p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                       <h5 class="white-text">Contact</h5>
                       <ul>
+<<<<<<< HEAD
                         <li><a class="white-text text-ighten-3" href="#!">Gmail</a></li>
                         <li><a class="white-text text-lighten-3" href="#!">Facebook</a></li>
                         <li><a class="white-text text-lighten-3" href="#!">Instagram</a></li>
                         <li><a class="white-text text-lighten-3" href="{% url 'homepage:user_feedback' %}">Feedback</a></li>
+=======
+                        <li><a class="grey-text text-ighten-3" href="#!">Gmail</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3" href="{% url 'homepage:user_feedback' %}">Feedback</a></li>
+>>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
                       </ul>
                     </div>
                   </div>
