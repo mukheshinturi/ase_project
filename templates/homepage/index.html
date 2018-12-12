@@ -1,6 +1,7 @@
 {% extends "homepage/base.html" %}
 {% block content %}
 {% load staticfiles %}
+{% load mytags %}
 <!--Slider-->
   <div class="slider">
     <ul class="slides">
@@ -47,7 +48,7 @@
       <p>Search from the millions of images in our collection</p>
       <nav>
       <div class="nav-wrapper">
-        <form action="{% url 'searchdata' %}" method="get">
+        <form action="{% url 'finalapp:searchdata' %}" method="get">
           <div class="input-field grey lighten-4">
             <input id="search" type="search" name="searchword" required>
             <label class="label-icon" for="search"><i class="material-icons indigo-text text-darken-4">search</i></label>
@@ -73,41 +74,41 @@
 </p>
 
   <div class="carousel">
-    <a class="carousel-item" href="#one!">
+    <a class="carousel-item" href="{% url 'myapp:index' value="Animals" %}">
         <img src="{% static 'homepage/images/animals.jpg' %}">
         <p ><h5 class="center-align black-text flow-text">Animals</h5></p>
     </a>
-    <a class="carousel-item" href="#one!">
+    <a class="carousel-item" href="{% url 'myapp:index' value="Abstract" %}">
         <img src="{% static 'homepage/images/abstract.jpg'%}">
         <p ><h5 class="center-align black-text flow-text">Abstract</h5></p>
     </a>
 
-    <a class="carousel-item" href="#one!">
+    <a class="carousel-item" href="{% url 'myapp:index' value="Festivals" %}">
         <img src="{% static 'homepage/images/festivals.jpg'%}">
         <p ><h5 class="center-align black-text flow-text">Festivals</h5></p>
     </a>
 
-    <a class="carousel-item" href="#one!">
+    <a class="carousel-item" href="{% url 'myapp:index' value="Food" %}">
         <img src="{% static 'homepage/images/food.jpg'%}">
         <p ><h5 class="center-align black-text flow-text">Food</h5></p>
     </a>
 
-    <a class="carousel-item" href="#one!">
+    <a class="carousel-item" href="{% url 'myapp:index' value="Lifestyle" %}">
         <img src="{% static 'homepage/images/lifestyle.jpg'%}">
         <p ><h5 class="center-align black-text flow-text">Lifestyle</h5></p>
     </a>
 
-    <a class="carousel-item" href="#one!">
+    <a class="carousel-item" href="{% url 'myapp:index' value="Nature" %}">
         <img src="{% static 'homepage/images/nature.jpg'%}">
         <p ><h5 class="center-align black-text flow-text">Nature</h5></p>
     </a>
 
-    <a class="carousel-item" href="#one!">
+    <a class="carousel-item" href="{% url 'myapp:index' value="People" %}">
         <img src="{% static 'homepage/images/people.jpg'%}">
         <p ><h5 class="center-align black-text flow-text">People</h5></p>
     </a>
 
-    <a class="carousel-item" href="#one!">
+    <a class="carousel-item" href="{% url 'myapp:index' value="Objects" %}">
         <img src="{% static 'homepage/images/objects.jpg'%}">
         <p ><h5 class="center-align black-text flow-text">Objects</h5></p>
     </a>
@@ -127,45 +128,17 @@
 </p>
 
   <div class="carousel">
-    <a class="carousel-item" href="#one!">
-        <img src="{% static 'homepage/images/abstract.jpg'%}">
+    {% for image in new_images %}
+       <!-- <a href="#" class="carousel-item valign-wrapper" >
+        <img src="{{ image.image.url }}"  style="max-width:100%;height:auto;">
+      </a> -->
+    <div class="carousel-item valign-wrapper">
+      <img id="id{{ forloop.counter }} onclick="popup('myModal', 'id{{ forloop.counter }}', 'img01', 'download_img', '{{ image.image.url }}')"
+       src="{{ image.image.url }}" alt="">
 
-    </a>
-    <a class="carousel-item" href="#one!">
-        <img src="{% static 'homepage/images/animals.jpg'%}">
+    </div>
 
-    </a>
-
-    <a class="carousel-item" href="#one!">
-        <img src="{% static 'homepage/images/food.jpg'%}">
-
-    </a>
-    <a class="carousel-item" href="#one!">
-        <img src="{% static 'homepage/images/festivals.jpg'%}">
-
-    </a>
-
-
-    <a class="carousel-item" href="#one!">
-        <img src="{% static 'homepage/images/nature.jpg'%}">
-
-    </a>
-    <a class="carousel-item" href="#one!">
-        <img src="{% static 'homepage/images/lifestyle.jpg'%}">
-
-    </a>
-
-
-    <a class="carousel-item" href="#one!">
-        <img src="{% static 'homepage/images/objects.jpg'%}">
-
-    </a>
-    <a class="carousel-item" href="#one!">
-        <img src="{% static 'homepage/images/people.jpg'%}">
-        <p ><h5 class="center-align black-text flow-text">People</h5></p>
-    </a>
-
-
+    {% endfor %}
   </div>
 
 </div>

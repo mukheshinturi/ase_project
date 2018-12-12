@@ -1,16 +1,24 @@
-function popup(id0, id1, id2, download_img_id, download_img_url) {
+ function popup(id0, id1, id2, download_img_id, download_img_url,user_id,down_act,down,like_act,li,user, likes) {
+
     var modal = document.getElementById(id0);
 
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     var img = document.getElementById(id1);
     var modalImg = document.getElementById(id2);
     var dwnld_img = document.getElementById(download_img_id);
-    dwnld_img.setAttribute("href", download_img_url);
-    img.onclick = function () {
+    var userid=document.getElementById(user_id);
+    var down = document.getElementById(down);
+    var li = document.getElementById(li);
+	dwnld_img.setAttribute("href", download_img_url);
+    down.setAttribute("action",down_act);
+    li.setAttribute("action",like_act);
+	img.onclick = function () {
         modal.style.display = "block";
         modalImg.src = this.src;
-        captionText.innerHTML = this.alt;
+        userid.innerHTML = this.alt;
     };
+	document.getElementById(user_id).setAttribute('href', user);
+
 
     window.onclick = function(event) {
         if (event.target == modal) {
@@ -19,9 +27,9 @@ function popup(id0, id1, id2, download_img_id, download_img_url) {
     };
 
     var span = document.getElementsByClassName("close")[0];
-
     // When the user clicks on <span> (x), close the modal
     span.onclick = function () {
         modal.style.display = "none";
     };
+    document.getElementById('likes').innerHTML = likes;
 }
