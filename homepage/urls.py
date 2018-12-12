@@ -11,10 +11,11 @@ urlpatterns=[
     path('password_reset_confirm/',PasswordResetConfirmView.as_view(),name="password_reset_confirm"),
     path('password_reset_complete/',PasswordResetCompleteView.as_view(),name="password_reset_complete"),
     path('feedback/',views.user_feedback,name="user_feedback"),
-<<<<<<< HEAD
+
     path('profile_view/',views.profile_view,name="profile_view"),
     path('delete_image/(?P<value>\s+)',views.delete_image,name="delete_image"),
-    path('edit_profile/',views.edit_profile,name="edit_profile")
-=======
->>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
+    path('edit_profile/',views.edit_profile,name="edit_profile"),
+    path('update_image/(?P<value>\s+)',views.update_image,name="update_image"),
+
+
 ]

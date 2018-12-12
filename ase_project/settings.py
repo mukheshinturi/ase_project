@@ -45,12 +45,6 @@ INSTALLED_APPS = [
     'finalapp',
     'category_page',
     'myapp',
-<<<<<<< HEAD
-
-=======
-    'users',
-    'crispy_forms',
->>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
 ]
 
 MIDDLEWARE = [
@@ -156,19 +150,11 @@ LOGIN_URL='homepage/user_login'
 # EMAIL_USE_TLS =True
 # EMAIL_USER_SSL=False
 
-<<<<<<< HEAD
-#
-=======
 
->>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
 EMAIL_HOST = 'smtp.hushmail.com'
 EMAIL_HOST_USER = 'ooha123321@hushmail.com'
 EMAIL_HOST_PASSWORD = 'thisisooha'
 EMAIL_PORT = 587
 EMAIL_USE_TLS =True
 EMAIL_USER_SSL=False
-<<<<<<< HEAD
-=======
 
-CRISPY_TEMPLATE_PACK='bootstrap'
->>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6

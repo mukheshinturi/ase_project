@@ -3,30 +3,27 @@ from finalapp.models import Document
 import os
 from django.conf import settings
 
+from django.contrib.auth.models import User
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+
 # Create your views here.
 #import pathlib
 def index(request,value):
-    p=Document.objects.filter(category=value)
+    image_list=Document.objects.filter(category=value)
     items=[]
     listitems=[]
-    # for w in p:
-    #     if w.category=='Animals':
-    #         x=str(w.image)
-    #         #print(settings.MEDIA_DIR)
-    #         pathimage=os.path.join(settings.MEDIA_DIR,x)
-    #         #pathimage=pathlib.PureWindowsPath(pathimage)
-    #         #print(pathimage.as_posix())
-    #         #print(pathimage)
-    #         items.append(pathimage)
-    #         listitems=[w.replace('\\','/') for w in items]
-    #
-    # print(listitems)
-    #     # for i in items:
-    #     #     i.replace("''\'","/")
-    #     #print(items)
-    # list1=['C:/Users/ramya sahitya/Documents/GitHub/ase_project/media/animal1.jpg','C:/Users/ramya sahitya/Documents/GitHub/ase_project/media/animal1_apsFEQL.jpg','C:/Users/ramya sahitya/Documents/GitHub/ase_project/media/animal2.jpg','C:/Users/ramya sahitya/Documents/GitHub/ase_project/media/animal2_vgxt2YQ.jpg']
-    # items=['../static/category/images/1.jpg','../static/category/images/2.jpg']
-    context={'items':p}
+
+    page = request.GET.get('page', 1)
+    paginator = Paginator(image_list, 12)
+    try:
+        users = paginator.page(page)
+    except PageNotAnInteger:
+        users = paginator.page(1)
+    except EmptyPage:
+        users = paginator.page(paginator.num_pages)
+
+    context={'users': users,'value':value}
+
     return render(request, 'myapp/category/index.html', context)
 
 

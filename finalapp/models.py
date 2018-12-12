@@ -24,11 +24,10 @@ class Document(models.Model):
     uploaded_at=models.DateTimeField(auto_now_add=True)
     rating=models.IntegerField(default='5')
     total_image_downloads=models.IntegerField(default='0')
-<<<<<<< HEAD
+
     def __str__(self):
         return self.name
-=======
     #userid=models.OneToOneField(models1.UserProfileInfo,on_delete='CASCADE')
     #userid=FOREIGNKEY(UserProfileInfo,on_delete='CASCADE')
     #userid = models.ForeignKey(models1.UserProfileInfo,on_delete='CASCADE')
->>>>>>> e2e81602d85c6bebcced2f293e90e4ff77cb60f6
+
