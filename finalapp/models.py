@@ -20,14 +20,10 @@ class Document(models.Model):
     user= models.ForeignKey(User,on_delete=models.CASCADE)
     name= models.CharField(max_length=150,default="")
     category= models.CharField(max_length=150,default="",choices=category_choices)
-    image=models.ImageField(default='',upload_to='')
+    image=models.FileField(default='',upload_to='')
     uploaded_at=models.DateTimeField(auto_now_add=True)
     rating=models.IntegerField(default='5')
     total_image_downloads=models.IntegerField(default='0')
-
+    countlikes=models.IntegerField(default='0')
     def __str__(self):
         return self.name
-    #userid=models.OneToOneField(models1.UserProfileInfo,on_delete='CASCADE')
-    #userid=FOREIGNKEY(UserProfileInfo,on_delete='CASCADE')
-    #userid = models.ForeignKey(models1.UserProfileInfo,on_delete='CASCADE')
-
